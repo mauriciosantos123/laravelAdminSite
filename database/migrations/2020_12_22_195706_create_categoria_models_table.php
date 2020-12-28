@@ -17,6 +17,7 @@ class CreateCategoriaModelsTable extends Migration
             $table->increments('categoria_id');
             $table->string('name', 100);
             $table->string('collection', 100);
+            $table->text('img_categoria');
             $table->timestamps();
             $table->index(['name','collection']);
             

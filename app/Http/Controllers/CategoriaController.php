@@ -4,17 +4,17 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\CategoriaModel;
-class CategoriaController extends Controller
-{
+
+class CategoriaController extends Controller {
+
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
-    public function index(Request $request)
-    {
-         $catglist = CategoriaModel::get();
-        $data['listcatg']= $catglist;
+    public function index(Request $request) {
+        $catglist = CategoriaModel::get();
+        $data['listcatg'] = $catglist;
 
         return view('categoria.index', $data);
     }
@@ -24,14 +24,13 @@ class CategoriaController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
-    {
-       $data= array();
+    public function create() {
+        $data = array();
 
 
 
-            $catglist = CategoriaModel::get();
-            $data['catglist']= $catglist;
+        $catglist = CategoriaModel::get();
+        $data['catglist'] = $catglist;
         return view('categoria.create', $data);
     }
 
@@ -41,18 +40,15 @@ class CategoriaController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
-    {
+    public function store(Request $request) {
         //
 
-        
+
         CategoriaModel::create([
-           
             'name' => $request->name,
             'collection' => $request->collection,
-            
-
-    ]);
+            'img_categoria' => $request->img_categoria,
+        ]);
         $request->session()->flash('message', ' cadatrado com sucesso');
         return redirect()->to('categoria');
     }
@@ -63,8 +59,7 @@ class CategoriaController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
-    {
+    public function show($id) {
         $reg = \App\Models\CategoriaModel::findOrFail($id);
         $data['reg'] = $reg;
         return view('categoria.edit', $data);
@@ -76,20 +71,19 @@ class CategoriaController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
-    {
+    public function edit($id) {
 
 
         $data = array();
         $data['categoria_id'] = $id;
-        
+
         $reg = CategoriaModel::findOrFail($id);
         $data ["registro"] = $reg;
-      
 
-        return view('categoria.edit',$data);
-        
-  
+
+        return view('categoria.edit', $data);
+
+
 
         //
     }
@@ -101,19 +95,16 @@ class CategoriaController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
-    {
+    public function update(Request $request, $id) {
         //
-   
+
         $reg = CategoriaModel::findOrFail($id);
         // dd($request->all());
         $reg->update
-        ([
-                'name' => $request->name,
-                'collection' => $request->collection,
-
-
-
+                ([
+            'name' => $request->name,
+            'collection' => $request->collection,
+            'img_categoria' => $request->img_categoria,
         ]);
 
         $request->session()->flash('message', ' Editado com sucesso');
@@ -126,8 +117,11 @@ class CategoriaController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
-    {
-        //
+    public function destroy(Request $req, $id) {
+        CategoriaModel::where("categoria_id", $id)->delete();
+        $req->session()->flash('message', ' apagado com sucesso');
+        return redirect()->to('categoria');
     }
+
+    //
 }

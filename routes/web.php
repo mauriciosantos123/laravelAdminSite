@@ -24,5 +24,7 @@ Route::resource('admin', AdminController::class);
 Route::resource('login', LoginController::class);
 Route::resource('categoria', CategoriaController::class);
 Route::resource('post', PostController::class);
-Route::resource('products', ProductsController::class);
+Route::resource('product', ProductsController::class);
+//Route::delete('/delproduct/{id}', 'ProductsController@destroy')->name('product.destroy');
+
 

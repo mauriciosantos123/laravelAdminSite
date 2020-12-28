@@ -23,6 +23,12 @@
                 <input type="text" class="form-control" id="collection" name="collection" value="{{ $registro
                  ->collection }}">
             </div>
+            
+                        <div class="form-group">
+                <label for="inputImgCategoria">Imagem</label>
+                <input type="text" class="form-control" id="img_categoria" name="img_categoria" value="{{ $registro
+                 ->img_categoria }}">
+            </div>
             <button type="submit" class="btn btn-primary">Submit</button>
         </form>
     </div>

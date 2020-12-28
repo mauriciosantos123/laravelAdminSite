@@ -30,6 +30,7 @@ class ProductsModel extends Model
         'status',
         'categoria',
         'destaque',
+        'lancamento',
  
      ];
 }
