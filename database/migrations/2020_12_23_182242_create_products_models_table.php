@@ -11,7 +11,8 @@ class CreateProductsModelsTable extends Migration {
      *
      * @return void
      */
-    public function up() {
+    public function up()
+     {
         Schema::create('products', function (Blueprint $table) {
             $table->increments('product_id');
             $table->string('name', 100);
@@ -31,7 +32,7 @@ class CreateProductsModelsTable extends Migration {
             $table->timestamp('date_modified', 0)->nullable();
 
 
-            $table->index(['name', 'price', 'desc', 'status', 'categoria', 'destaque','lancamento']);
+            $table->index(['name', 'price', 'desc', 'status', 'categoria', 'destaque']);
         });
     }
 

@@ -6,6 +6,9 @@ use App\Http\Controllers\LoginController;
 use App\Http\Controllers\CategoriaController;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\ProductsController;
+use App\Http\Controllers\UsuarioController;
+use App\Http\Controllers\LogoutController;
+
 
 /*
   |--------------------------------------------------------------------------
@@ -25,6 +28,11 @@ Route::resource('login', LoginController::class);
 Route::resource('categoria', CategoriaController::class);
 Route::resource('post', PostController::class);
 Route::resource('product', ProductsController::class);
+Route::resource('usuarios',UsuarioController::class);
+Route::resource('login',LoginController::class);
+Route::resource('logout',LogoutController::class);
+
+
 //Route::delete('/delproduct/{id}', 'ProductsController@destroy')->name('product.destroy');
 
 

@@ -1,9 +1,9 @@
 @extends('comum.index')
 @section('content')
 <div class="g-pa-20">
-    <h1 class="g-font-weight-300 g-font-size-28 g-color-black g-mb-30">User</h1>
+    <h1 class="g-font-weight-300 g-font-size-28 g-color-black g-mb-30">Usuario</h1>
 
-    <a href="{{route('.create')}}" class="btn btn-primary">Nova User</a>
+    <a href="{{route('.create')}}" class="btn btn-primary">Nova Usuario</a>
 
     <div class="table-responsive g-mb-40">
         <table class="table u-table--v3 g-color-black">

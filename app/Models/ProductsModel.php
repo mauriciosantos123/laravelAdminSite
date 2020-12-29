@@ -13,7 +13,7 @@ class ProductsModel extends Model
     const UPDATED_AT = "date_modified";
     
     protected $table = 'products';
-
+    
     protected $primaryKey = 'product_id';
 
 

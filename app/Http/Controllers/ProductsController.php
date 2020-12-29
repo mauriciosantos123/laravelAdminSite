@@ -5,8 +5,12 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use \App\Models\ProductsModel;
 use \App\Models\CategoriaModel;
+use App\Http\Requests;
+
 
 class ProductsController extends Controller {
+
+
 
     private function process_form(Request $request) {
         $data['destaque'] = 0;
@@ -130,7 +134,7 @@ class ProductsController extends Controller {
         //
 
 
-        $reg = CategoriaModel::findOrFail($id);
+        $reg = ProductsModel::findOrFail($id);
         // dd($request->all());
         $reg->update($this->process_form($request));
 

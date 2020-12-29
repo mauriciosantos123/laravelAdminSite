@@ -63,7 +63,7 @@
             </div>
     
     
-            <select id='categoria_id' name='categoria' class='form-control'>
+            <select id='categoria_id' name='categoria' class='form-control' >
 
             <option value=''>selecione um categoria </option>    
             @foreach($catglist as $prod)
@@ -76,11 +76,11 @@
 
             <div class="form-check">
                 
-                <input type="checkbox" class="form-check-input" id="destaque" name="destaque"value="{{ $registro->destaque}}" ><label for="destaque" class="form-check-label">destaque</label>
+                <input type="checkbox" class="form-check-input" id="destaque" name="destaque" ><label for="destaque" class="form-check-label">destaque</label>
             </div>
             <div class="form-check">
                 
-                <input type="checkbox" class="form-check-input" id="lancamento" name="lancamento" value="{{ $registro->lancamento}}"><label for="lancamento" class="form-check-label">Lançamento</label>
+                <input type="checkbox" class="form-check-input" id="lancamento" name="lancamento" ><label for="lancamento" class="form-check-label">Lançamento</label>
             </div>
 
 

@@ -4,9 +4,11 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\AdminModel;
+use App\Http\Middleware\Authenticate;
 
 class AdminController extends Controller
 {
+
     /**
      * Display a listing of the resource.
      *
@@ -14,10 +16,12 @@ class AdminController extends Controller
      */
     public function index(Request $request)
     {
+     
         //       
         $data['list'] = array();
  ;
-        return view('admin.index',$data);
+        $html= view('admin.index',$data);
+        return Authenticate::logged($request, $html);
     }
 
     /**

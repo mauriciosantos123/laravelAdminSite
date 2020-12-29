@@ -32,6 +32,6 @@ class CreatePostModelsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('post_models');
+        Schema::dropIfExists('blog');
     }
 }
