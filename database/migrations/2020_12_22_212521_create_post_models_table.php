@@ -18,6 +18,8 @@ class CreatePostModelsTable extends Migration
             $table->string('titulo', 100);
             $table->string('autor', 100);
             $table->string('desc', 255);
+              $table->string('categoria', 255);
+                $table->string('img_blog');
             $table->date('dateblog');
             $table->timestamps();
             $table->index(['titulo','autor','desc','dateblog']);

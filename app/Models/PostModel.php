@@ -15,6 +15,8 @@ class PostModel extends Model
        'autor',
        'desc',
        'dateblog',
+        'categoria',
+        'img_blog'
 
     ];
 }

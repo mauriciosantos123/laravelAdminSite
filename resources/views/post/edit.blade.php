@@ -20,6 +20,16 @@
                 <label for="inputDesc">Descrição </label>
                 <input type="text" class="form-control" id="desc" name="desc" value="{{ $reg->desc }}">
             </div>
+            
+                        <div class="form-group">
+                <label for="inputDesc">Descrição </label>
+                <input type="text" class="form-control" id="desc" name="desc" value="{{ $reg->categoria }}">
+            </div>
+            
+                        <div class="form-group">
+                <label for="inputDesc">Descrição </label>
+                <input type="text" class="form-control" id="desc" name="desc" value="{{ $reg->img_blog }}">
+            </div>
             <div class="form-group">
                 <label for="inputDate">Data da publicação </label>
                 <input type="date" class="form-control" id="dateblog" name="dateblog" value="{{ $reg->dateblog }}">

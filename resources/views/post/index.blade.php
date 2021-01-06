@@ -13,6 +13,8 @@
                     <th>Autor</th>
                     <th>Descrição </th>
                     <th>Data</th>
+                     <th>1</th>
+                      <th>2</th>
                     <th>Ações</th>
 
                 </tr>
@@ -25,6 +27,8 @@
             <td>{{ $blogs->autor }}</td>
             <td>{{ $blogs->desc }}</td>
             <td>{{ $blogs->dateblog }}</td>
+            <td>{{ $blogs->categoria }}</td>
+            <td>{{ $blogs->img_blog }}</td>
 
             <td>
                 <div class="g-pos-rel g-top-3 d-inline-block">

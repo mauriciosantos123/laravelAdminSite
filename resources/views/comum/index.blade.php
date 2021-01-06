@@ -4,7 +4,7 @@
 
     <head>
         <!-- Title -->
-        <title>Tables - Basic | Unify - Responsive Website Template</title>
+        <title>AdministreSite</title>
         <base href="/adminsite/public/">
 
         <!-- Required Meta Tags Always Come First -->

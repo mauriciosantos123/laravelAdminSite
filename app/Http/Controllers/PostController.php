@@ -16,6 +16,8 @@ class PostController extends Controller
         $data['titulo'] = $request->titulo;
         $data['desc'] = $request->desc;
         $data['dateblog'] = $request->dateblog;
+        $data['categoria'] = $request->categoria;
+        $data['img_blog'] = $request->img_blog;
 
 
 
